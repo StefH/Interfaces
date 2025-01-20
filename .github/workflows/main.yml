@@ -1,0 +1,23 @@
+name: Build
+
+on: 
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build-and-test:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2022]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: 'Build solution'
+      run: dotnet build './Solution - Interfaces.sln' -c Release
