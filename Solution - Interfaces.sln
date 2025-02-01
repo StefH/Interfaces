@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31521.260
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -34,6 +35,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITcpClientConsoleApp", "src-examples\ITcpClientConsoleApp\ITcpClientConsoleApp.csproj", "{F1845958-BE75-42C3-9790-58A86A380D68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IUdpClientConsoleApp", "src-examples\IUdpClientConsoleApp\IUdpClientConsoleApp.csproj", "{1A48062B-92BB-4556-B390-43E8053AC30A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITask", "src\ITask\ITask.csproj", "{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +76,10 @@ Global
 		{1A48062B-92BB-4556-B390-43E8053AC30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A48062B-92BB-4556-B390-43E8053AC30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A48062B-92BB-4556-B390-43E8053AC30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +93,7 @@ Global
 		{5A50A6DE-BC8B-4AF6-9DFE-EE6CA8DCF012} = {38BA087F-EDA1-4F8A-A140-85B84791B815}
 		{F1845958-BE75-42C3-9790-58A86A380D68} = {38BA087F-EDA1-4F8A-A140-85B84791B815}
 		{1A48062B-92BB-4556-B390-43E8053AC30A} = {38BA087F-EDA1-4F8A-A140-85B84791B815}
+		{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3} = {ED3DA9DD-1E07-444B-A2D7-2DBA280F96D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {585F071D-051D-441C-9C6B-226D9E15A1F5}
