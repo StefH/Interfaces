@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Version>0.0.3</Version>
+		<Version>0.0.3.1</Version>
 		<TargetFrameworks>net461;netstandard2.1;net6.0;net8.0</TargetFrameworks>
 		<ProjectGuid>{38C2BB6E-EE23-4C4F-B8D5-A2AD592DE5E3}</ProjectGuid>
 		<Title>IUdpClient</Title>
