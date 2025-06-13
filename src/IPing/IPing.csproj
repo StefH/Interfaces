@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Version>0.0.1</Version>
+		<Version>0.0.1.1</Version>
 		<TargetFrameworks>netstandard2.1;net461;net48;net6.0;net8.0</TargetFrameworks>
         <ProjectGuid>{38DDBB6E-EE23-4C4F-B8D5-A2AD592DFAE3}</ProjectGuid>
 		<Title>IPing</Title>
