@@ -1,28 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<Version>0.0.7.1</Version>
-		<TargetFrameworks>net461;netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
-		<ProjectGuid>{38C2BB6E-EE23-4C4F-B8D5-A2AD592DE5E3}</ProjectGuid>
-		<Title>IHttpClient</Title>
+  <PropertyGroup>
+    <Version>0.0.8.0</Version>
+    <TargetFrameworks>net461;netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
+    <ProjectGuid>{38C2BB6E-EE23-4C4F-B8D5-A2AD592DE5E3}</ProjectGuid>
+    <Title>IHttpClient</Title>
     <RootNamespace>System.Net.Http</RootNamespace>
-		<PackageId>IHttpClient</PackageId>
-		<Description>This project uses source generation to generate an IHttpClient interface and HttpClientProxy from the HttpClient to make it injectable and unit-testable.</Description>
-		<PackageTags>HttpClient;interface;IHttpClient;Proxy;HttpClientProxy</PackageTags>
-		<!-- <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../PackageReleaseNotes.txt"))</PackageReleaseNotes> -->
-	</PropertyGroup>
+    <PackageId>IHttpClient</PackageId>
+    <Description>This project uses source generation to generate an IHttpClient interface and HttpClientProxy from the HttpClient to make it injectable and unit-testable.</Description>
+    <PackageTags>HttpClient;interface;IHttpClient;Proxy;HttpClientProxy;IIHttpClientFactory</PackageTags>
+    <!-- <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../PackageReleaseNotes.txt"))</PackageReleaseNotes> -->
+  </PropertyGroup>
 
-	<ItemGroup>
-		<None Include="../../resources/interfaces-icon.png" Pack="true" PackagePath="" />
-		<None Include="PackageReadme.md" Pack="true" PackagePath="" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="../../resources/interfaces-icon.png" Pack="true" PackagePath="" />
+    <None Include="PackageReadme.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net461' or '$(TargetFramework)' == 'netstandard2.1' or '$(TargetFramework)' == 'net6.0' ">
-		<PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
-		<PackageReference Include="StringSyntaxPolyfill" Version="1.1.0" />
-	</ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' or '$(TargetFramework)' == 'netstandard2.1' ">
+    <PackageReference Include="StringSyntaxPolyfill" Version="1.1.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
-	</ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <PackageReference Include="StringSyntaxPolyfill" Version="1.1.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net7.0' ">
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+  </ItemGroup>
 </Project>

@@ -26,7 +26,7 @@ services.AddSingleton<IIHttpClientFactory, HttpClientFactoryService>();
 
 IHttpClient httpClientProxy = services.BuildServiceProvider()
 	.GetRequiredService<IIHttpClientFactory>()
-	.Create();
+	.Create("MyClient");
 ```
 
 ### Sponsors
