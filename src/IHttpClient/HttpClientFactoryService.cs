@@ -8,4 +8,10 @@ public class HttpClientFactoryService(IHttpClientFactory factory) : IIHttpClient
     {
         return new HttpClientProxy(factory.CreateClient(name));
     }
+
+    /// <inheritdoc />
+    public IHttpClient CreateClient()
+    {
+        return CreateClient(string.Empty);
+    }
 }
